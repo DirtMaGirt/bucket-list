@@ -13,9 +13,9 @@ We'll be working with input fields again, but this time, we'll have a 'submit' b
 
 The user will type in a bucket list item, and hit submit, and the "fancy" code we provided will add that text in an `li` to our `ul`. But _you_ will have to keep track of that list somehow (we highly recommend a globally-declared array!), because you'll also have to print out:
 
-1. The newest item.
-2. The oldest item.
-3. The number of items.
+1. The item they most recently added.
+2. The item at the top of their bucket list.
+3. The number of items on the bucket list.
 
 It should be obvious from the commented scaffolded code where to put YOUR code, but if there are any questions, let us know!
 
