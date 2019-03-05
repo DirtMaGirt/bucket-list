@@ -64,7 +64,15 @@ function removeItem(event) {
 
 function toggleQueueAndStack(event) {
     // Prevent page reload.
-    event.preventDefault()
+    event.preventDefault();
+
+    // When we're currently in "stack mode", let's have it show "Toggle to Queue" as the button.
+    // Put this code wherever you know you're in stack mode!
+    // document.querySelector('#toggle').innerText = 'Toggle to Queue';
+
+    // When we're currently in "queue mode", let's have it show "Toggle to Stack" as the button.
+    // Put this code wherever you know you're in queue mode!
+    // document.querySelector('#toggle').innerText = 'Toggle to Stack';
 
     // How can we toggle whether it's a stack or a queue?
     // Your code below!
