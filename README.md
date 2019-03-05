@@ -19,6 +19,9 @@ The user will type in a bucket list item, and hit submit, and the "fancy" code w
 
 It should be obvious from the commented scaffolded code where to put YOUR code, but if there are any questions, let us know!
 
+### Requirement(s)
+1. I want to see no `let`s unless you actually need them. Let's start defaulting to `const`, party people!
+
 ### Layout 
 
 We want to see one mobile layout and one tablet-and-up layout (where the window is greater than 720 pixels).
