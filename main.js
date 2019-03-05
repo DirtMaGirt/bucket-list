@@ -38,7 +38,7 @@ function addNewItem(event) {
     // Display it in next-item if it's the first item:
     if(false) { // definitely change that condition!
         document.querySelector('#next-item').innerText = ''; // Replace that empty string with the actual item!
-    } 
+    }
 
     document.querySelector('#top-item').innerText = '' // Replace that empty string with the actual item!
 
@@ -57,7 +57,7 @@ function removeItem(event) {
     } else {
         removeFirstFromPage();
         // Your code to remove it from the array goes here!
-
+        items.push(myArr.pop())
 
     }
 }
