@@ -28,4 +28,8 @@ We want to see one mobile layout and one tablet-and-up layout (where the window 
 
 ### Stretch Goals
 
+* You can actually toggle the `isStack` variable in a mere 19 characters (or less if you want to write hard-to-read and potentially dangerous code without spaces or semi-colons).
+
 * See that Queue/Stack button? It sets a global variable of `isStack` to true or false. Based on whether we're doing a queue or a stack, change the `li` adding code and your code for managing your data.  Then, when we remove something this way, print out that that item has been completed. We can only complete things from the front of the list that way, but... if it was first on the list,  you obviously thought it was the most important thing to put on your bucket list! ("It's not a bug"...)
+
+* As the code is currently configured, we only update the newest item, top item, and number of items when we _add_ an item. Can you copy that display code to wherever you're removing items? You can! You shouldn't have to change anything in the `document.querySelector`s, but what to change the three things to will be a little trickier.
