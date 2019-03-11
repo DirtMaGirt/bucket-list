@@ -1,7 +1,7 @@
 // Global variables ftw
-
-
-let isStack = true;
+const bucketListArr = [];
+const completedListArr = [];
+let isStack = false;
 
 // Set init to run when the window loads.
 window.onload = init;
@@ -16,15 +16,17 @@ function init() {
         .addEventListener('click', removeItem);
 
     document.querySelector('#toggle')
-            .addEventListener('click', toggleQueueAndStack);
+        .addEventListener('click', toggleQueueAndStack);
 }
 
 function addNewItem(event) {
     // Prevent page reload.
     event.preventDefault()
-    
+
     // Get the value from the input field.
     const newItem = document.querySelector('#new-item').value;
+    bucketListArr.push(newItem)
+    console.log(bucketListArr);
 
     // Set the input field back to blank.
     resetInput();
@@ -34,30 +36,46 @@ function addNewItem(event) {
 
     // Now comes your part: add the item to the list.
 
-
     // Display it in next-item if it's the first item:
-    if(false) { // definitely change that condition!
-        document.querySelector('#next-item').innerText = ''; // Replace that empty string with the actual item!
+    if (true) { // definitely change that condition!
+        document.querySelector('#newest-item').innerText = newItem; // Replace that empty string with the actual item!
     }
 
-    document.querySelector('#top-item').innerText = '' // Replace that empty string with the actual item!
+    document.querySelector('#top-item').innerText = bucketListArr[0] // Replace that empty string with the actual item!
 
-    document.querySelector('#number-of-items').innerText = 0 // Replace that with the number of items!
+    document.querySelector('#number-of-items').innerText = bucketListArr.length; // Replace that with the number of items!
 }
 
 function removeItem(event) {
     // Prevent page reload.
-    event.preventDefault()
+    event.preventDefault();
 
-    if(isStack) {
+    if (isStack === true) {
         removeLastFromPage();
         // Your code to remove it from the array  goes here!
+        const completedBucketItem = bucketListArr.shift();
+        completedListArr.push(completedBucketItem);
+
+        console.log(completedListArr);
+
+        console.log(bucketListArr);
+
+        document.querySelector('#number-of-items').innerText = bucketListArr.length;
+        document.querySelector('#top-item').innerText = bucketListArr[0]
 
 
     } else {
         removeFirstFromPage();
         // Your code to remove it from the array goes here!
-        items.push(myArr.pop())
+
+        const completedBucketItem = bucketListArr.pop();
+        completedListArr.push(completedBucketItem);
+
+        console.log(completedListArr);
+        console.log(bucketListArr);
+
+        document.querySelector('#number-of-items').innerText = bucketListArr.length;
+        document.querySelector('#top-item').innerText = bucketListArr[0]
 
     }
 }
@@ -68,11 +86,11 @@ function toggleQueueAndStack(event) {
 
     // When we're currently in "stack mode", let's have it show "Toggle to Queue" as the button.
     // Put this code wherever you know you're in stack mode!
-    // document.querySelector('#toggle').innerText = 'Toggle to Queue';
+    document.querySelector('#toggle').innerText = 'Toggle to Queue';
 
     // When we're currently in "queue mode", let's have it show "Toggle to Stack" as the button.
     // Put this code wherever you know you're in queue mode!
-    // document.querySelector('#toggle').innerText = 'Toggle to Stack';
+    document.querySelector('#toggle').innerText = 'Toggle to Stack';
 
     // How can we toggle whether it's a stack or a queue?
     // Your code below!

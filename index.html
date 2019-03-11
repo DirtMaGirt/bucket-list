@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,30 +8,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
-    <div>
-        <h1 id="heading">The Bucket List</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-4 bg-dark">
+                <h1 id="heading">The Bucket List</h1>
+            </div>
+            <div class="col-md-3 col-8">
+                <h3 id="number-of-items"></h3>
+            </div>
+        </div>
+
+
+        <div>
+            <h2 id="newest-item"> Recent: </h2>
+            <h2 id="newest-item"> </h2>
+        </div>
+        <div>
+            <h3 id="top-item"></h3>
+        </div>
+
+        <div>
+            <h3 id="completed-item"></h3>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 ">
+                <form class="form">
+                    <input type="text" id="new-item">
+                    <button class="btn btn-outline-dark" id="submit">Add An Item</button>
+                    <button class="btn btn-outline-dark" id="remove">Remove An Item</button>
+                    <button class="btn btn-outline-dark" id="toggle">Toggle To Queue</button>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <ul id="items" class="col-12">
+                </ul>
+            </div>
+        </div>
     </div>
-    <ul id="items">
-    </ul>
-    <div>
-        <h3 id="newest-item"></h3>
-    </div>
-    <div>
-        <h3 id="top-item"></h3>
-    </div>
-    <div>
-        <h3 id="number-of-items"></h3>
-    </div>
-    <div>
-        <h3 id="completed-item"></h3>
-    </div>
-    <form>items.push
-        <input type="text" id="new-item">
-        <button id="submit">Add An Item</button>
-        <button id="remove">Remove An Item</button>
-        <button id="toggle">Toggle To Queue</button>
-    </form>
 </body>
+
 </html>
